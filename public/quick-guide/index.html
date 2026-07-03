@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quick Guide DeSonKuPik — Cara Cepat Mastering Audio Online</title>
+    <meta
+      name="description"
+      content="Panduan cepat DeSonKuPik untuk membuka audio, memakai Smart Headroom, preset Mastering, monitor output, dan export WAV/MP3 mastering."
+    />
+    <link rel="canonical" href="https://desonkupik.pages.dev/quick-guide/" />
+    <meta
+      property="og:title"
+      content="Quick Guide DeSonKuPik — Cara Cepat Mastering Audio Online"
+    />
+    <meta
+      property="og:description"
+      content="Panduan cepat DeSonKuPik untuk membuka audio, memakai Smart Headroom, preset Mastering, monitor output, dan export WAV/MP3 mastering."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://desonkupik.pages.dev/quick-guide/" />
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #080c10;
+        --panel: #10161c;
+        --soft: #151d24;
+        --text: #e8f1f6;
+        --muted: #8ea1ad;
+        --line: #24323d;
+        --pri: #4dd7f7;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background:
+          radial-gradient(circle at 20% 0%, rgba(77, 215, 247, 0.12), transparent 32rem), var(--bg);
+        font-family:
+          Inter,
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          Segoe UI,
+          sans-serif;
+        color: var(--text);
+      }
+      a {
+        color: inherit;
+      }
+      .wrap {
+        max-width: 1040px;
+        margin: 0 auto;
+        padding: 32px 20px 52px;
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 36px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+      }
+      .logo {
+        display: grid;
+        place-items: center;
+        width: 34px;
+        height: 34px;
+        border-radius: 10px;
+        background: rgba(77, 215, 247, 0.12);
+        color: var(--pri);
+        border: 1px solid rgba(77, 215, 247, 0.25);
+      }
+      .brand b {
+        display: block;
+        font-size: 15px;
+      }
+      .brand span {
+        display: block;
+        font-size: 10px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      .app {
+        padding: 9px 12px;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        text-decoration: none;
+        color: var(--muted);
+        font-size: 13px;
+      }
+      .hero {
+        border: 1px solid rgba(77, 215, 247, 0.22);
+        background: linear-gradient(180deg, rgba(77, 215, 247, 0.08), rgba(16, 22, 28, 0.76));
+        border-radius: 24px;
+        padding: 34px;
+        box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+      }
+      .kicker {
+        font-size: 11px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--pri);
+        font-weight: 700;
+      }
+      .hero h1 {
+        font-size: clamp(32px, 6vw, 58px);
+        line-height: 1.02;
+        margin: 10px 0 14px;
+        letter-spacing: -0.045em;
+      }
+      .lead {
+        font-size: 18px;
+        line-height: 1.7;
+        color: #adc0ca;
+        max-width: 760px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 24px;
+      }
+      .card {
+        border: 1px solid var(--line);
+        background: rgba(16, 22, 28, 0.72);
+        border-radius: 18px;
+        padding: 20px;
+      }
+      .card h2 {
+        margin: 0 0 10px;
+        font-size: 18px;
+      }
+      .card ul {
+        margin: 0;
+        padding-left: 18px;
+        color: var(--muted);
+        line-height: 1.75;
+      }
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 24px;
+      }
+      .links a {
+        padding: 10px 13px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        text-decoration: none;
+        background: rgba(21, 29, 36, 0.75);
+        font-size: 13px;
+        color: #cfe3ed;
+      }
+      .footer {
+        margin-top: 34px;
+        color: var(--muted);
+        font-size: 12px;
+      }
+      @media (max-width: 760px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        .hero {
+          padding: 24px;
+        }
+        .nav {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+      }
+    </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "Quick Guide DeSonKuPik",
+        "description": "Panduan cepat DeSonKuPik untuk membuka audio, memakai Smart Headroom, preset Mastering, monitor output, dan export WAV/MP3 mastering.",
+        "author": { "@type": "Person", "name": "Mas Ari" },
+        "publisher": { "@type": "Organization", "name": "DeSonKuPik" }
+      }
+    </script>
+  </head>
+  <body>
+    <main class="wrap">
+      <nav class="nav">
+        <a class="brand" href="/"
+          ><span class="logo">✦</span><span><b>DeSonKuPik</b><span>Online Mastering</span></span></a
+        >
+        <a class="app" href="/">Open Web App</a>
+      </nav>
+      <header class="hero">
+        <div class="kicker">Quick Guide</div>
+        <h1>Quick Guide DeSonKuPik</h1>
+        <p class="lead">
+          Panduan cepat untuk menghasilkan file audio mastering yang clean, lebih hidup, dan siap
+          export langsung dari browser.
+        </p>
+        <div class="links">
+          <a href="/quick-guide/smart-headroom/">Smart Headroom</a>
+          <a href="/quick-guide/mastering-workflow/">Mastering Workflow</a>
+          <a href="/quick-guide/export-loudness/">Export Loudness</a>
+          <a href="/quick-guide/monitor-output/">Monitor Output</a>
+        </div>
+      </header>
+      <div class="grid">
+        <section class="card">
+          <h2>Workflow 5 langkah</h2>
+          <ul>
+            <li>Open audio lewat File atau drag & drop.</li>
+            <li>Tunggu Smart Headroom membaca loudness dan peak file.</li>
+            <li>Dengarkan preset Mastering sebagai starting point.</li>
+            <li>Gunakan Bypass dan Gain Match untuk membandingkan.</li>
+            <li>Export WAV/MP3 mastered saat hasil sudah cocok.</li>
+          </ul>
+        </section>
+        <section class="card">
+          <h2>Kenapa ada guide ini?</h2>
+          <ul>
+            <li>
+              DeSonKuPik dibuat agar user tidak harus memahami DAW kompleks sebelum mendapatkan
+              hasil mastering yang rapi.
+            </li>
+            <li>
+              Panduan ini menjelaskan fitur inti dengan bahasa praktis agar workflow lebih cepat.
+            </li>
+          </ul>
+        </section>
+      </div>
+      <p class="footer">© DeSonKuPik · Author: Mas Ari · Cloudflare Pages ready.</p>
+    </main>
+  </body>
+</html>

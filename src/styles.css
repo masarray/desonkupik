@@ -1,0 +1,194 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+/*
+ * DeSonKuPik — calm dark DAW aesthetic.
+ * Single-mode dark UI. Plugin accents drive per-FX colour without ad-hoc hex.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-panel: var(--panel);
+  --color-panel-soft: var(--panel-soft);
+  --color-meter: var(--meter);
+  --color-meter-warn: var(--meter-warn);
+  --color-meter-clip: var(--meter-clip);
+
+  --color-fx-eq: var(--fx-eq);
+  --color-fx-comp: var(--fx-comp);
+  --color-fx-color: var(--fx-color);
+  --color-fx-width: var(--fx-width);
+  --color-fx-limiter: var(--fx-limiter);
+
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Sometype Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+
+:root {
+  --radius: 0.5rem;
+
+  /* Calm premium DAW: near-monochrome cool greys, one cyan accent. */
+  --background: oklch(0.145 0.008 250);
+  --foreground: oklch(0.94 0.004 250);
+
+  --card: oklch(0.185 0.009 250);
+  --card-foreground: oklch(0.94 0.004 250);
+
+  --popover: oklch(0.205 0.01 250);
+  --popover-foreground: oklch(0.94 0.004 250);
+
+  --primary: oklch(0.8 0.11 215);
+  --primary-foreground: oklch(0.14 0.012 250);
+
+  --secondary: oklch(0.235 0.009 250);
+  --secondary-foreground: oklch(0.94 0.004 250);
+
+  --muted: oklch(0.215 0.008 250);
+  --muted-foreground: oklch(0.64 0.012 250);
+
+  --accent: oklch(0.27 0.012 250);
+  --accent-foreground: oklch(0.96 0.005 250);
+
+  --destructive: oklch(0.66 0.18 25);
+  --destructive-foreground: oklch(0.98 0 0);
+
+  --border: oklch(0.255 0.009 250);
+  --input: oklch(0.235 0.008 250);
+  --ring: oklch(0.8 0.11 215);
+
+  --panel: oklch(0.18 0.009 250);
+  --panel-soft: oklch(0.21 0.01 250);
+
+  --meter: oklch(0.74 0.13 165);
+  --meter-warn: oklch(0.8 0.14 80);
+  --meter-clip: oklch(0.66 0.2 25);
+
+  /* Per-plugin accents — calm cool family. Knobs + canvas use same hue per FX. */
+  --fx-eq: oklch(0.8 0.11 215);
+  --fx-comp: oklch(0.8 0.1 200);
+  --fx-color: oklch(0.8 0.11 245);
+  --fx-width: oklch(0.78 0.11 275);
+  --fx-limiter: oklch(0.72 0.16 25);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: oklch(0.34 0.012 250);
+    border-radius: 6px;
+    border: 2px solid var(--color-background);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: oklch(0.42 0.014 250);
+  }
+}
+
+@utility ms-mono {
+  font-family: var(--font-mono);
+  font-feature-settings: "tnum", "zero";
+}
+@utility ms-glow {
+  box-shadow:
+    0 0 0 1px color-mix(in oklab, var(--primary) 30%, transparent),
+    0 0 24px -4px color-mix(in oklab, var(--primary) 35%, transparent);
+}
+
+.ms-loading-line {
+  animation: msLoadLine 1.35s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+  box-shadow: 0 0 18px color-mix(in oklab, var(--primary) 38%, transparent);
+}
+
+.ms-loading-chip {
+  width: 5px;
+  height: 5px;
+  border-radius: 9999px;
+  background: color-mix(in oklab, var(--primary) 72%, white 8%);
+  opacity: 0.35;
+  animation: msLoadChip 1s ease-in-out infinite;
+}
+
+@keyframes msLoadLine {
+  0% {
+    transform: translateX(-120%);
+  }
+  55% {
+    transform: translateX(95%);
+  }
+  100% {
+    transform: translateX(260%);
+  }
+}
+
+@keyframes msLoadChip {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.32;
+  }
+  45% {
+    transform: translateY(-2px);
+    opacity: 0.95;
+  }
+}
+
+/* Bypass visual state is scoped only to the active plugin editor shell.
+   Transport, waveform, I/O, preset indicators, and meters stay readable. */
+.ms-bypass-muted-shell {
+  opacity: 0.62;
+  filter: saturate(0.34) brightness(0.84) contrast(0.94);
+  transition:
+    opacity 180ms ease,
+    filter 180ms ease;
+}
+
+.ms-bypass-muted-shell canvas {
+  opacity: 0.72;
+}

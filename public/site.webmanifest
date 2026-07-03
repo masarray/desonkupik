@@ -1,0 +1,22 @@
+{
+  "name": "DeSonKuPik",
+  "short_name": "DeSonKuPik",
+  "description": "DeSonKuPik online mastering web app.",
+  "icons": [
+    {
+      "src": "/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "theme_color": "#081a56",
+  "background_color": "#081a56",
+  "display": "standalone"
+}
