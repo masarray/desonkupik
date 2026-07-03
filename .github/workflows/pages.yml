@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['docs/**', '.github/workflows/pages.yml']
+    paths: ['docs/**', 'build/icon.png', '.github/workflows/pages.yml']
 permissions:
   contents: read
   pages: write
@@ -16,6 +16,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      - name: Copy brand icon
+        run: mkdir -p docs/assets && cp build/icon.png docs/assets/icon.png
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
