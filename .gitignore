@@ -1,5 +1,51 @@
+# ------------------------------------------------------------
+# DeSonKuPik ignore rules
+# Keep GitHub source clean: source code only, no local build output.
+# ------------------------------------------------------------
+
+# Dependencies
+node_modules/
+.pnp/
+.pnp.js
+
+# Web build output
+/dist/
+/dist-ssr/
+/.vite/
+/.nitro/
+/.output/
+
+# Electron / desktop build output
+/release/
+/out/
+/build-output/
+/electron-dist/
+*.AppImage
+*.app
+*.dmg
+*.pkg
+*.exe
+*.msi
+*.deb
+*.rpm
+*.snap
+*.tar.gz
+*.zip
+*.blockmap
+latest*.yml
+builder-debug.yml
+builder-effective-config.yaml
+
+# Electron builder and packager cache
+.electron/
+.electron-builder/
+.electron-gyp/
+.cache/
+.parcel-cache/
+.turbo/
+
 # Logs
-logs
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -7,23 +53,45 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-.nitro
+# Runtime / local env
 *.local
+.env
+.env.*
+!.env.example
 
 # Wrangler / Cloudflare
 .wrangler/
 .dev.vars
 
+# TypeScript / test / coverage
+*.tsbuildinfo
+coverage/
+.nyc_output/
+playwright-report/
+test-results/
+
+# OS files
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+Desktop.ini
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
-.idea
-.DS_Store
+!.vscode/settings.json
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.orig
+*.rej
+~$*
