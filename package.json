@@ -60,7 +60,7 @@
     "wait-on": "^8.0.3"
   },
   "version": "0.3.83",
-  "description": "DeSonKuPik desktop and web audio mastering app based on the v0.3.81 Treble Coherence Global engine.",
+  "description": "Beautiful one-click audio mastering for web and desktop by SonKuPik.",
   "productName": "DeSonKuPik",
   "author": "SonKuPik",
   "main": "electron/main.cjs",
@@ -162,8 +162,8 @@
       "artifactName": "${productName}-${version}-${arch}.${ext}"
     }
   },
-  "license": "UNLICENSED",
-  "homepage": "https://github.com/masarray/desonkupik#readme",
+  "license": "GPL-3.0-or-later",
+  "homepage": "https://masarray.github.io/desonkupik/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/masarray/desonkupik.git"
