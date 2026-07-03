@@ -56,7 +56,7 @@
     "vite": "6.3.5",
     "concurrently": "^9.2.0",
     "electron": "^37.2.0",
-    "electron-builder": "^26.0.12",
+    "electron-builder": "26.15.3",
     "wait-on": "^8.0.3"
   },
   "version": "0.3.81",
@@ -87,7 +87,6 @@
     ],
     "win": {
       "icon": "build/icon.ico",
-      "publisherName": "SonKuPik",
       "target": [
         {
           "target": "nsis",
@@ -101,7 +100,9 @@
             "x64"
           ]
         }
-      ]
+      ],
+      "sign": false,
+      "verifyUpdateCodeSignature": false
     },
     "nsis": {
       "oneClick": false,
