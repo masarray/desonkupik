@@ -25,10 +25,20 @@ jobs:
               release/*.exe
               release/*.blockmap
               release/*.yml
-          - name: macOS
+          - name: macOS x64
             os: macos-latest
-            command: npm run build && npx electron-builder --mac dmg pkg --x64 --arm64 --publish never
-            artifact: desonkupik-macos
+            command: npm run build && npx electron-builder --mac dmg pkg --x64 --publish never
+            artifact: desonkupik-macos-x64
+            files: |
+              release/*.dmg
+              release/*.pkg
+              release/*.zip
+              release/*.blockmap
+              release/*.yml
+          - name: macOS arm64
+            os: macos-latest
+            command: npm run build && npx electron-builder --mac dmg pkg --arm64 --publish never
+            artifact: desonkupik-macos-arm64
             files: |
               release/*.dmg
               release/*.pkg
