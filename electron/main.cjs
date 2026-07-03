@@ -51,14 +51,15 @@ function sanitizeFileName(name) {
 
 async function createMainWindow() {
   mainWindow = new BrowserWindow({
-    width: 1360,
-    height: 860,
+    width: 1440,
+    height: 900,
     minWidth: 1080,
     minHeight: 720,
-    title: APP_NAME,
+    title: `${APP_NAME} — Offline Audio Mastering`,
     icon: resolveWindowIcon(),
     backgroundColor: "#080813",
     show: false,
+    autoHideMenuBar: process.platform !== "darwin",
     titleBarStyle: process.platform === "darwin" ? "hiddenInset" : "default",
     webPreferences: {
       preload: path.join(__dirname, "preload.cjs"),
@@ -68,6 +69,10 @@ async function createMainWindow() {
       webSecurity: true,
     },
   });
+
+  if (process.platform !== "darwin") {
+    mainWindow.setMenuBarVisibility(false);
+  }
 
   mainWindow.once("ready-to-show", () => {
     mainWindow.show();
@@ -103,6 +108,14 @@ function sendMenuCommand(command) {
 
 function buildMenu() {
   const isMac = process.platform === "darwin";
+
+  // On Windows/Linux production, keep the desktop app visually identical to the web UI.
+  // The web app already has its own header/menu, so the native Electron menu is hidden.
+  if (!isMac && app.isPackaged) {
+    Menu.setApplicationMenu(null);
+    return;
+  }
+
   const template = [
     ...(isMac
       ? [
