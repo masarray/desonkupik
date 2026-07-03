@@ -59,7 +59,7 @@
     "electron-builder": "26.15.3",
     "wait-on": "^8.0.3"
   },
-  "version": "0.3.82",
+  "version": "0.3.83",
   "description": "DeSonKuPik desktop and web audio mastering app based on the v0.3.81 Treble Coherence Global engine.",
   "productName": "DeSonKuPik",
   "author": "SonKuPik",
