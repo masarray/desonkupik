@@ -1,13 +1,60 @@
-# DeSonKuPik
+<p align="center">
+  <img src="build/icon.png" width="96" alt="DeSonKuPik icon" />
+</p>
 
-DeSonKuPik is a lightweight online audio mastering web app for `desonkupik.pages.dev`.
+<h1 align="center">DeSonKuPik</h1>
 
-Target workflow:
+<p align="center">
+  <strong>Beautiful one-click audio mastering for the web and desktop.</strong><br />
+  Open a file, let the chain enhance it, then export a polished master.
+</p>
 
-1. Open an audio file in the browser.
-2. The default **Mastering** preset starts immediately: broad corrective EQ, vocal-body guard, gentle glue compression, premium color, source-protected width, and true-peak-safe limiting.
-3. Preview through EQ, compressor, color, source-protected stereo width, and limiter.
-4. Export a peak-safe 24-bit WAV master.
+<p align="center">
+  <a href="https://github.com/masarray/desonkupik/actions/workflows/ci.yml"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/masarray/desonkupik/ci.yml?branch=main&label=CI&style=for-the-badge" /></a>
+  <a href="https://github.com/masarray/desonkupik/actions/workflows/release.yml"><img alt="Desktop release build" src="https://img.shields.io/github/actions/workflow/status/masarray/desonkupik/release.yml?label=Desktop%20Build&style=for-the-badge" /></a>
+  <a href="https://github.com/masarray/desonkupik/releases"><img alt="Latest release" src="https://img.shields.io/github/v/release/masarray/desonkupik?display_name=tag&style=for-the-badge" /></a>
+  <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-GPLv3%20%2B%20Commercial-20d6ff?style=for-the-badge" /></a>
+</p>
+
+<p align="center">
+  <a href="https://masarray.github.io/desonkupik/"><strong>Landing Page</strong></a> ·
+  <a href="https://github.com/masarray/desonkupik/releases"><strong>Download</strong></a> ·
+  <a href="docs/RELEASE.md"><strong>Release Guide</strong></a> ·
+  <a href="LICENSING.md"><strong>Licensing</strong></a>
+</p>
+
+---
+
+## What is DeSonKuPik?
+
+**DeSonKuPik** is a modern audio mastering application by **SonKuPik**. It runs as a web app and as a desktop app for Windows, macOS, and Linux using Electron.
+
+The product idea is simple:
+
+> **Magic → open file → export becomes automatically better.**
+
+DeSonKuPik is designed for creators who want a fast, musical, and visually elegant mastering workflow without opening a complex DAW session.
+
+## Highlights
+
+- **One-click mastering chain** with EQ, compressor, color, stereo width, and limiter.
+- **Mas Ari Signature direction** for smooth body, enhanced clarity, and controlled top-end coherence.
+- **Desktop-ready** with native file open/export dialogs.
+- **Web-ready** for Cloudflare Pages or any static hosting.
+- **Cross-platform builds** for Windows, macOS, and Linux through GitHub Actions.
+- **Dual licensing**: GPL for open-source use and a commercial license path for proprietary use.
+
+## Desktop downloads
+
+Official installers are published from GitHub Releases after a tagged release build.
+
+| Platform | Expected artifacts |
+|---|---|
+| Windows | `.exe` installer and portable `.exe` |
+| macOS | `.dmg` and `.pkg` for Intel/Apple Silicon |
+| Linux | `.AppImage`, `.deb`, and `.tar.gz` |
+
+Unsigned builds may show Windows SmartScreen or macOS Gatekeeper warnings. Production distribution should use Windows code signing and Apple notarization.
 
 ## Local development
 
@@ -16,29 +63,49 @@ npm ci
 npm run dev
 ```
 
-## Validation
+Desktop development:
+
+```bash
+npm run desktop:dev
+```
+
+## Build and validation
 
 ```bash
 npm run typecheck
-npm run build
 npm run lint
+npm run build
 ```
+
+Desktop builds:
+
+```bash
+npm run desktop:win
+npm run desktop:mac
+npm run desktop:linux
+```
+
+## Release workflow
+
+A new release can be created with a version tag:
+
+```bash
+npm version patch
+git push --follow-tags
+```
+
+The release workflow builds Windows, macOS, and Linux packages and publishes them to GitHub Releases when the build is triggered by a `v*.*.*` tag.
 
 ## Cloudflare Pages
 
-Use these settings for `desonkupik.pages.dev`:
+Recommended settings:
 
-- Framework preset: Vite
-- Build command: `npm run build`
-- Build output directory: `dist`
-- Node.js: 22 or newer recommended
-
-The repository includes Cloudflare-ready files:
-
-- `wrangler.toml` with `pages_build_output_dir = "dist"`
-- `public/_redirects` for SPA fallback
-- `public/_headers` for safe static headers and immutable Vite asset cache
-- `public/robots.txt` and `public/sitemap.xml`
+| Setting | Value |
+|---|---|
+| Framework preset | Vite |
+| Build command | `npm run build` |
+| Build output directory | `dist` |
+| Node.js | 22 or newer |
 
 Optional direct deploy after Cloudflare login:
 
@@ -46,32 +113,46 @@ Optional direct deploy after Cloudflare login:
 npm run cf:deploy
 ```
 
-## Engineering notes
+## GitHub Pages landing page
 
-- Brand is DeSonKuPik only. Old extension/product names and template names should not appear in user-facing UI.
+This repository includes a professional landing page under `docs/` and a GitHub Actions Pages workflow.
 
-- Default preset is **Mastering**. It is tuned as a one-click studio chain: sub cleanup, controlled bass weight, 490 Hz vocal-body guard, smooth presence/detail, gentle glue compression, harmonic color, source-protected stereo width, and transparent limiting.
-- Smart Headroom runs immediately after file decode, before the EQ/compressor/color/width/limiter chain. It uses a fast ITU/EBU-inspired gated loudness estimate plus exact sample-peak scan, then sets the file pre-gain toward roughly -18 LUFS while preserving about 6 dB peak headroom.
-- The smart file pre-gain stage is file-specific and preserved when switching presets or A/B slots so every preset starts from the same clean gain-staged file level.
-- Low-frequency stereo is protected. Mono bass behavior is implemented as gentle side-bus narrowing, not hard mono collapse.
-- Live Output gain is not automatically attenuated by presets; it stays at 0 dB unless the user moves it or enables Gain Match. This keeps the mastered result audibly bigger during normal preview.
-- Gain Match is an intentional A/B listening tool only. When enabled, it slowly trims the processed path so comparison stays fair while preserving about +0.7 dB perceived advantage for the mastered result.
-- Offline export finalizes the WAV to a global streaming-safe studio target of about -14 LUFS integrated and -1 dBTP ceiling, then applies transparent peak-safe trim only when needed before 24-bit PCM encoding.
+After GitHub Pages is enabled for the repository, the public landing page is expected at:
 
-## Windows npm native binding fix
-
-This project pins Vite to `6.3.5` to avoid the Vite 8/Rolldown native binding path that can fail on Windows when npm skips platform optional dependencies. The lock file includes Rollup Windows and Linux optional packages, and `.npmrc` keeps installs on the public npm registry with optional dependencies included.
-
-Recommended Windows flow: extract this ZIP into a clean folder, then install from the included lock file.
-
-If you are replacing files inside an existing folder, delete the old `node_modules` first and make sure the `package-lock.json` from this ZIP replaces the old lock file.
-
-```powershell
-rd /s /q node_modules
-npm ci
-npm run typecheck
-npm run build
-npm run lint
+```text
+https://masarray.github.io/desonkupik/
 ```
 
-Do not delete the new lock file after extraction, and do not run `npm update` casually because it may upgrade Vite back to the newer Rolldown bundler line.
+## Licensing
+
+DeSonKuPik is distributed under a **dual-license model**:
+
+1. **GPL-3.0-or-later** for open-source use.
+2. **Commercial license** for proprietary distribution, OEM bundling, white-label use, closed-source derivative products, commercial SaaS, or enterprise redistribution.
+
+See [LICENSING.md](LICENSING.md) and [COMMERCIAL-LICENSE.md](COMMERCIAL-LICENSE.md).
+
+This is not legal advice. For commercial deployment, review the final license terms with qualified counsel.
+
+## Engineering notes
+
+- Brand is **DeSonKuPik** only. Legacy app names should not appear in public UI.
+- The desktop production build uses relative Vite asset paths so packaged Electron loads the same UI as the web app.
+- The app icon, visual identity, presets, and SonKuPik marks remain SonKuPik brand assets.
+- Build outputs such as `dist/`, `release/`, installers, caches, and generated binaries are excluded from source control.
+
+## Contributing
+
+Contributions are welcome under the GPL license path. By contributing, you agree that your contribution can be distributed under the repository's dual-license model.
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting issues or pull requests.
+
+## Security
+
+Please do not open public issues for security-sensitive reports. See [SECURITY.md](SECURITY.md).
+
+---
+
+<p align="center">
+  Made with care by <strong>SonKuPik</strong>.
+</p>
