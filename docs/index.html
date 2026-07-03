@@ -3,49 +3,101 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>DeSonKuPik — Online Audio Mastering</title>
-    <meta name="description" content="DeSonKuPik is a beautiful one-click audio mastering app for web and desktop." />
+    <title>DeSonKuPik — Free Open Source Audio Mastering App for Windows, macOS, Linux and Web</title>
+    <meta name="description" content="DeSonKuPik is a beautiful open-source audio mastering app for creators. Open audio, enhance it with a clean mastering chain, and export polished WAV or MP3 masters on web and desktop." />
+    <meta name="keywords" content="audio mastering app, free mastering software, open source audio mastering, desktop mastering app, online audio mastering, Windows audio mastering, macOS audio mastering, Linux audio mastering, WAV mastering, MP3 mastering, DeSonKuPik, SonKuPik" />
+    <meta name="author" content="SonKuPik" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://masarray.github.io/desonkupik/" />
+    <link rel="icon" type="image/png" href="./assets/icon.png" />
+    <link rel="apple-touch-icon" href="./assets/icon.png" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="DeSonKuPik — Beautiful Audio Mastering for Creators" />
+    <meta property="og:description" content="Open your audio. Enhance it with an elegant mastering chain. Export a polished master from web or desktop." />
+    <meta property="og:url" content="https://masarray.github.io/desonkupik/" />
+    <meta property="og:image" content="https://masarray.github.io/desonkupik/assets/icon.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="DeSonKuPik — Audio Mastering for Creators" />
+    <meta name="twitter:description" content="A polished open-source audio mastering app for web and desktop." />
+    <meta name="twitter:image" content="https://masarray.github.io/desonkupik/assets/icon.png" />
+    <link rel="preload" href="./assets/icon.png" as="image" />
     <link rel="stylesheet" href="./styles.css" />
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"SoftwareApplication","name":"DeSonKuPik","applicationCategory":"MultimediaApplication","operatingSystem":"Windows, macOS, Linux, Web","description":"Open-source audio mastering app for creators with desktop and web builds.","url":"https://masarray.github.io/desonkupik/","downloadUrl":"https://github.com/masarray/desonkupik/releases","softwareVersion":"0.3.83","publisher":{"@type":"Organization","name":"SonKuPik"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+    </script>
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is DeSonKuPik free?","acceptedAnswer":{"@type":"Answer","text":"DeSonKuPik is published as a public open-source project with downloadable desktop builds from GitHub Releases."}},{"@type":"Question","name":"Does DeSonKuPik work offline?","acceptedAnswer":{"@type":"Answer","text":"The desktop app is designed for local audio processing and does not require cloud upload for normal use."}},{"@type":"Question","name":"Which platforms are supported?","acceptedAnswer":{"@type":"Answer","text":"DeSonKuPik is prepared for Windows, macOS, Linux, and web builds."}},{"@type":"Question","name":"Can I export WAV or MP3?","acceptedAnswer":{"@type":"Answer","text":"The app is designed around opening audio, previewing the mastering chain, and exporting polished audio masters."}}]}
+    </script>
   </head>
   <body>
-    <main class="shell">
-      <nav class="nav">
-        <div class="brand"><span class="logo">▶</span><span>DeSonKuPik</span></div>
-        <div class="links">
-          <a href="https://github.com/masarray/desonkupik">GitHub</a>
-          <a href="https://github.com/masarray/desonkupik/releases">Download</a>
-        </div>
+    <main>
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="DeSonKuPik home"><img src="./assets/icon.png" alt="" /><span>DeSonKuPik</span></a>
+        <div class="links"><a href="#features">Features</a><a href="#downloads">Downloads</a><a href="#faq">FAQ</a><a href="https://github.com/masarray/desonkupik">GitHub</a></div>
       </nav>
 
-      <section class="hero">
-        <p class="eyebrow">SonKuPik audio lab</p>
-        <h1>Open a file. Master it beautifully. Export with confidence.</h1>
-        <p class="lead">DeSonKuPik is a polished audio mastering app for creators who want a fast, musical, and elegant workflow on web and desktop.</p>
-        <div class="actions">
-          <a class="button primary" href="https://github.com/masarray/desonkupik/releases">Download desktop app</a>
-          <a class="button" href="https://github.com/masarray/desonkupik">View source</a>
+      <section id="top" class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">SonKuPik audio lab · open source desktop mastering</p>
+          <h1>Beautiful audio mastering for creators.</h1>
+          <p class="lead">Open your audio, enhance it with a musical mastering chain, and export a polished master in seconds. DeSonKuPik brings a clean studio workflow to the web and desktop.</p>
+          <div class="actions"><a class="button primary" href="https://github.com/masarray/desonkupik/releases">Download Desktop</a><a class="button" href="https://github.com/masarray/desonkupik">View on GitHub</a></div>
+          <div class="badges"><img alt="Release" src="https://img.shields.io/github/v/release/masarray/desonkupik?display_name=tag&style=flat-square" /><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/masarray/desonkupik/ci.yml?branch=main&label=CI&style=flat-square" /><img alt="License" src="https://img.shields.io/badge/license-GPLv3-23d6ff?style=flat-square" /></div>
+        </div>
+        <div class="product-card" aria-label="DeSonKuPik product preview">
+          <div class="app-top"><span></span><span></span><span></span><strong>DeSonKuPik</strong></div>
+          <div class="visualizer"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="chain"><span>EQ</span><span>Comp</span><span>Color</span><span>Width</span><span>Limiter</span></div>
+          <div class="export-row"><b>Master ready</b><em>WAV · MP3 · Desktop</em></div>
         </div>
       </section>
 
-      <section class="grid">
-        <article>
-          <h2>Magic workflow</h2>
-          <p>Drop an audio file, preview the chain, and export a polished master without complex setup.</p>
-        </article>
-        <article>
-          <h2>Studio chain</h2>
-          <p>EQ, compression, color, stereo width, and limiting are presented in a clean modern interface.</p>
-        </article>
-        <article>
-          <h2>Desktop ready</h2>
-          <p>Builds are prepared for Windows, macOS, and Linux through GitHub Actions releases.</p>
-        </article>
+      <section id="features" class="section">
+        <p class="eyebrow">Why creators use it</p>
+        <h2>Fast enough for daily content. Clean enough for serious listening.</h2>
+        <div class="grid features">
+          <article><h3>One-click mastering</h3><p>A simple import-preview-export workflow for creators who want better sound without a heavy DAW session.</p></article>
+          <article><h3>Studio-style chain</h3><p>EQ, compression, color, stereo width, and limiting are organized as a focused mastering signal path.</p></article>
+          <article><h3>Private processing</h3><p>Desktop builds keep normal audio work local, making it practical for drafts, client previews, and personal content.</p></article>
+          <article><h3>Cross-platform</h3><p>GitHub Actions builds Windows, macOS, and Linux installers so users can download and start quickly.</p></article>
+          <article><h3>Web ready</h3><p>The same Vite app can run on static hosting for instant access from a browser.</p></article>
+          <article><h3>Premium interface</h3><p>Designed with a modern dark audio-software aesthetic, clear controls, and a creator-first workflow.</p></article>
+        </div>
       </section>
 
-      <section class="panel">
-        <h2>Built for creators</h2>
-        <p>DeSonKuPik is designed around speed, clarity, and a premium listening result. It keeps the web app experience while adding desktop packaging and native file workflow.</p>
+      <section class="workflow section">
+        <p class="eyebrow">Magic workflow</p>
+        <h2>Open file → intelligent chain → beautiful export.</h2>
+        <div class="steps"><div>Import audio</div><div>Preview mastering</div><div>Fine tune</div><div>Export master</div></div>
+      </section>
+
+      <section id="downloads" class="section downloads">
+        <p class="eyebrow">Desktop releases</p>
+        <h2>Download for your operating system.</h2>
+        <div class="grid three">
+          <article><h3>Windows</h3><p>Installer and portable EXE builds for creator workstations.</p><a href="https://github.com/masarray/desonkupik/releases">Download EXE</a></article>
+          <article><h3>macOS</h3><p>DMG and PKG builds for Intel and Apple Silicon release pipelines.</p><a href="https://github.com/masarray/desonkupik/releases">Download DMG</a></article>
+          <article><h3>Linux</h3><p>AppImage, DEB, and tar.gz artifacts from automated releases.</p><a href="https://github.com/masarray/desonkupik/releases">Download Linux</a></article>
+        </div>
+      </section>
+
+      <section class="section open-source">
+        <p class="eyebrow">Open project</p>
+        <h2>Built in public with professional release automation.</h2>
+        <p class="center">DeSonKuPik combines a polished audio UI, Electron desktop packaging, GitHub Actions CI, automated cross-platform release builds, and a lightweight SEO landing page.</p>
+        <div class="actions center-actions"><a class="button primary" href="https://github.com/masarray/desonkupik">Star on GitHub</a><a class="button" href="https://github.com/masarray/desonkupik/actions">View CI</a></div>
+      </section>
+
+      <section id="faq" class="section faq">
+        <p class="eyebrow">FAQ</p>
+        <h2>Questions creators usually ask.</h2>
+        <details open><summary>Is DeSonKuPik free?</summary><p>DeSonKuPik is published as a public open-source project with desktop release artifacts on GitHub.</p></details>
+        <details><summary>Does it work offline?</summary><p>The desktop app is designed for local processing and native file open/export workflow.</p></details>
+        <details><summary>What platforms are supported?</summary><p>The release workflow prepares builds for Windows, macOS, and Linux. The web app can run on static hosting.</p></details>
+        <details><summary>Who is it for?</summary><p>Content creators, reviewers, musicians, editors, and audio enthusiasts who want a fast and beautiful mastering workflow.</p></details>
       </section>
     </main>
+    <footer><img src="./assets/icon.png" alt="" /><span>DeSonKuPik by SonKuPik</span><a href="https://github.com/masarray/desonkupik">GitHub</a><a href="https://github.com/masarray/desonkupik/releases">Releases</a></footer>
   </body>
 </html>
