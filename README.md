@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="build/icon.png" width="96" alt="DeSonKuPik icon" />
+  <img src="docs/assets/icon.svg" width="96" alt="DeSonKuPik icon" />
 </p>
 
 <h1 align="center">DeSonKuPik</h1>
