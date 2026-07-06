@@ -17,3 +17,16 @@ updates:
         patterns:
           - electron
           - electron-builder
+      ui-runtime:
+        patterns:
+          - react
+          - react-dom
+          - '@radix-ui/*'
+          - lucide-react
+          - zustand
+          - tailwind*
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
