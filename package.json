@@ -3,6 +3,9 @@
   "private": true,
   "sideEffects": false,
   "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "vite build",
@@ -61,6 +64,14 @@
   },
   "version": "0.3.83",
   "description": "Beautiful one-click audio mastering for web and desktop by SonKuPik.",
+  "keywords": [
+    "audio",
+    "mastering",
+    "desktop",
+    "electron",
+    "react",
+    "creator-tools"
+  ],
   "productName": "DeSonKuPik",
   "author": "SonKuPik",
   "main": "electron/main.cjs",
