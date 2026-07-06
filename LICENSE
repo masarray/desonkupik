@@ -1,6 +1,10 @@
-Copyright (c) 2026 SonKuPik. All rights reserved.
+SPDX-License-Identifier: GPL-3.0-or-later
 
-DeSonKuPik source code, brand assets, icons, audio engine design, presets, and binaries are proprietary unless a separate written license states otherwise.
+DeSonKuPik source code is licensed under the GNU General Public License version 3.0 or later.
 
-You may download and use official public release binaries for personal evaluation and normal app usage.
-You may not copy, redistribute, resell, sublicense, or create derivative commercial products from this source code or its assets without written permission from SonKuPik.
+Copyright (c) 2026 SonKuPik.
+
+You should have received a copy of the GNU General Public License along with this project. If not, see:
+https://www.gnu.org/licenses/gpl-3.0.html
+
+This license covers the source code. Project names, logos, icons, artwork, and other brand assets are documented separately in TRADEMARK.md.
