@@ -1,5 +1,11 @@
 blank_issues_enabled: false
 contact_links:
+  - name: Documentation
+    url: https://masarray.github.io/desonkupik/
+    about: Read the landing page and beginner documentation first.
+  - name: Releases
+    url: https://github.com/masarray/desonkupik/releases
+    about: Download official release artifacts.
   - name: General discussion
     url: https://github.com/masarray/desonkupik/discussions
     about: Ask questions or share ideas.
