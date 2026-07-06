@@ -52,7 +52,7 @@ It is designed for creators who want clearer, fuller, and more finished audio wi
 - **Desktop-ready** with native file open/export dialogs.
 - **Web-ready** for Cloudflare Pages or static hosting.
 - **Cross-platform release automation** for Windows, macOS, and Linux through GitHub Actions.
-- **Public source** with GPL package metadata and a business-use information page.
+- **Clear project governance** with separate source license, trademark policy, security policy, and business-use guidance.
 
 ## Desktop downloads
 
@@ -113,8 +113,19 @@ The release workflow builds Windows, macOS, and Linux packages and publishes the
 - [Install Guide](docs/INSTALL.md)
 - [User Guide](docs/USER-GUIDE.md)
 - [FAQ](docs/FAQ.md)
-- [Business Use](docs/business-use.md)
+- [License FAQ](docs/LICENSE-FAQ.md)
+- [Business Use](BUSINESS-USE.md)
+- [Commercial Services](COMMERCIAL-SERVICES.md)
 - [Release Guide](docs/RELEASE.md)
+
+## Licensing, trademark, and business use
+
+- **Source code:** GPL-3.0-or-later. See [LICENSE](LICENSE).
+- **Copyright:** see [COPYRIGHT.md](COPYRIGHT.md).
+- **Trademark and brand assets:** see [TRADEMARK.md](TRADEMARK.md).
+- **Business and enterprise scenarios:** see [BUSINESS-USE.md](BUSINESS-USE.md) and [COMMERCIAL-SERVICES.md](COMMERCIAL-SERVICES.md).
+
+The source license covers source code. The official DeSonKuPik and SonKuPik brand identity is handled separately so users can fork the code without creating brand confusion.
 
 ## GitHub Pages landing page
 
@@ -124,20 +135,21 @@ The repository includes a bilingual SEO landing page under `docs/`.
 https://masarray.github.io/desonkupik/
 ```
 
+## Governance and community
+
+- [Governance](GOVERNANCE.md)
+- [Code of Conduct](CODE_OF_CONDUCT.md)
+- [Contributing](CONTRIBUTING.md)
+- [Support](SUPPORT.md)
+- [Security](SECURITY.md)
+- [Supported Versions](SUPPORTED-VERSIONS.md)
+
 ## Engineering notes
 
 - Brand is **DeSonKuPik** only. Legacy app names should not appear in public UI.
 - The desktop production build uses relative Vite asset paths so packaged Electron loads the same UI as the web app.
 - The app icon, visual identity, presets, and SonKuPik marks remain SonKuPik brand assets.
 - Build outputs such as `dist/`, `release/`, installers, caches, and generated binaries are excluded from source control.
-
-## Contributing
-
-Contributions are welcome through issues and pull requests. Please read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting changes.
-
-## Security
-
-Please do not open public issues for security-sensitive reports. See [SECURITY.md](SECURITY.md).
 
 ---
 
