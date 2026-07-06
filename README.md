@@ -52,6 +52,7 @@ It is designed for creators who want clearer, fuller, and more finished audio wi
 - **Desktop-ready** with native file open/export dialogs.
 - **Web-ready** for Cloudflare Pages or static hosting.
 - **Cross-platform release automation** for Windows, macOS, and Linux through GitHub Actions.
+- **Release integrity helper** with generated SHA256 checksums for published artifacts.
 - **Clear project governance** with separate source license, trademark policy, security policy, and business-use guidance.
 
 ## Desktop downloads
@@ -106,7 +107,7 @@ npm version patch
 git push --follow-tags
 ```
 
-The release workflow builds Windows, macOS, and Linux packages and publishes them to GitHub Releases when the build is triggered by a `v*.*.*` tag.
+The release workflow builds Windows, macOS, and Linux packages, generates checksums, and publishes them to GitHub Releases when triggered by a `v*.*.*` tag.
 
 ## Documentation
 
@@ -116,6 +117,8 @@ The release workflow builds Windows, macOS, and Linux packages and publishes the
 - [License FAQ](docs/LICENSE-FAQ.md)
 - [Business Use](BUSINESS-USE.md)
 - [Commercial Services](COMMERCIAL-SERVICES.md)
+- [Distribution Guide](docs/DISTRIBUTION.md)
+- [Release Checklist](docs/RELEASE-CHECKLIST.md)
 - [Release Guide](docs/RELEASE.md)
 
 ## Licensing, trademark, and business use
