@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="DeSonKuPik icon">
+  <defs>
+    <linearGradient id="bg" x1="64" y1="64" x2="448" y2="448" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#23e6ff"/>
+      <stop offset="0.55" stop-color="#8c63ff"/>
+      <stop offset="1" stop-color="#ff9848"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="120" y1="88" x2="392" y2="420" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.82"/>
+      <stop offset="0.34" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadow" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="22" stdDeviation="26" flood-color="#050610" flood-opacity="0.42"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="128" fill="#060812"/>
+  <rect x="38" y="38" width="436" height="436" rx="112" fill="url(#bg)" filter="url(#shadow)"/>
+  <path d="M92 150c38-52 111-80 176-67 58 12 106 52 132 101 23 44 26 96 9 144-22 62-77 106-141 116-65 10-132-17-171-70 49 27 111 30 163 7 47-21 82-63 91-112 9-49-11-101-50-132-43-35-106-42-159-20-18 8-35 19-50 33Z" fill="#061018" opacity="0.9"/>
+  <path d="M176 156v200l168-100-168-100Z" fill="#061018" opacity="0.94"/>
+  <path d="M113 92h286c12 0 22 10 22 22v5c-116-7-222 22-330 87v-92c0-12 10-22 22-22Z" fill="url(#shine)"/>
+  <circle cx="371" cy="135" r="18" fill="#ffffff" opacity="0.75"/>
+  <circle cx="414" cy="178" r="8" fill="#ffffff" opacity="0.5"/>
+</svg>
