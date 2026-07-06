@@ -5,54 +5,66 @@
 <h1 align="center">DeSonKuPik</h1>
 
 <p align="center">
-  <strong>Beautiful one-click audio mastering for the web and desktop.</strong><br />
-  Open a file, let the chain enhance it, then export a polished master.
+  <strong>Beautiful one-click audio mastering for web and desktop.</strong><br />
+  Open an audio file, preview a musical mastering chain, and export a polished WAV or MP3 master.
 </p>
 
 <p align="center">
   <a href="https://github.com/masarray/desonkupik/actions/workflows/ci.yml"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/masarray/desonkupik/ci.yml?branch=main&label=CI&style=for-the-badge" /></a>
   <a href="https://github.com/masarray/desonkupik/actions/workflows/release.yml"><img alt="Desktop release build" src="https://img.shields.io/github/actions/workflow/status/masarray/desonkupik/release.yml?label=Desktop%20Build&style=for-the-badge" /></a>
   <a href="https://github.com/masarray/desonkupik/releases"><img alt="Latest release" src="https://img.shields.io/github/v/release/masarray/desonkupik?display_name=tag&style=for-the-badge" /></a>
-  <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-GPLv3%20%2B%20Commercial-20d6ff?style=for-the-badge" /></a>
+  <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-GPLv3-20d6ff?style=for-the-badge" /></a>
 </p>
 
 <p align="center">
   <a href="https://masarray.github.io/desonkupik/"><strong>Landing Page</strong></a> ·
   <a href="https://github.com/masarray/desonkupik/releases"><strong>Download</strong></a> ·
-  <a href="docs/RELEASE.md"><strong>Release Guide</strong></a> ·
-  <a href="LICENSING.md"><strong>Licensing</strong></a>
+  <a href="docs/INSTALL.md"><strong>Install Guide</strong></a> ·
+  <a href="docs/USER-GUIDE.md"><strong>User Guide</strong></a> ·
+  <a href="docs/FAQ.md"><strong>FAQ</strong></a>
 </p>
 
 ---
 
 ## What is DeSonKuPik?
 
-**DeSonKuPik** is a modern audio mastering application by **SonKuPik**. It runs as a web app and as a desktop app for Windows, macOS, and Linux using Electron.
+**DeSonKuPik** is a beginner-friendly audio mastering app by **SonKuPik**. It runs as a web app and as a desktop app for Windows, macOS, and Linux using Electron.
 
 The product idea is simple:
 
-> **Magic → open file → export becomes automatically better.**
+> **Open file → improve the sound → export a better master.**
 
-DeSonKuPik is designed for creators who want a fast, musical, and visually elegant mastering workflow without opening a complex DAW session.
+It is designed for creators who want clearer, fuller, and more finished audio without starting from a complex DAW session.
+
+## Who is it for?
+
+- YouTubers who want cleaner voiceover or music audio.
+- Podcasters who want speech to sound more controlled.
+- Musicians who need quick demo mastering previews.
+- Video editors who want audio to feel more finished before upload.
+- Beginners who want a simple open-preview-export workflow.
 
 ## Highlights
 
-- **One-click mastering chain** with EQ, compressor, color, stereo width, and limiter.
-- **Mas Ari Signature direction** for smooth body, enhanced clarity, and controlled top-end coherence.
+- **One-click starting point** with a ready mastering chain.
+- **Studio-style processing**: EQ, compressor, color, stereo width, and limiter.
+- **Beginner-friendly workflow**: open, listen, adjust only if needed, export.
 - **Desktop-ready** with native file open/export dialogs.
-- **Web-ready** for Cloudflare Pages or any static hosting.
-- **Cross-platform builds** for Windows, macOS, and Linux through GitHub Actions.
-- **Dual licensing**: GPL for open-source use and a commercial license path for proprietary use.
+- **Web-ready** for Cloudflare Pages or static hosting.
+- **Cross-platform release automation** for Windows, macOS, and Linux through GitHub Actions.
+- **Public source** with GPL package metadata and a business-use information page.
 
 ## Desktop downloads
 
 Official installers are published from GitHub Releases after a tagged release build.
 
-| Platform | Expected artifacts |
-|---|---|
-| Windows | `.exe` installer and portable `.exe` |
-| macOS | `.dmg` and `.pkg` for Intel/Apple Silicon |
-| Linux | `.AppImage`, `.deb`, and `.tar.gz` |
+| Platform | Recommended artifact | Notes |
+|---|---|---|
+| Windows | Setup `.exe` | Normal installer |
+| Windows | Portable `.exe` | Run without installing |
+| macOS | `.dmg` / `.pkg` | May show Gatekeeper warning if unsigned |
+| Linux | `.AppImage` | Usually easiest for desktop use |
+| Linux | `.deb` | Debian/Ubuntu-based systems |
 
 Unsigned builds may show Windows SmartScreen or macOS Gatekeeper warnings. Production distribution should use Windows code signing and Apple notarization.
 
@@ -96,43 +108,21 @@ git push --follow-tags
 
 The release workflow builds Windows, macOS, and Linux packages and publishes them to GitHub Releases when the build is triggered by a `v*.*.*` tag.
 
-## Cloudflare Pages
+## Documentation
 
-Recommended settings:
-
-| Setting | Value |
-|---|---|
-| Framework preset | Vite |
-| Build command | `npm run build` |
-| Build output directory | `dist` |
-| Node.js | 22 or newer |
-
-Optional direct deploy after Cloudflare login:
-
-```bash
-npm run cf:deploy
-```
+- [Install Guide](docs/INSTALL.md)
+- [User Guide](docs/USER-GUIDE.md)
+- [FAQ](docs/FAQ.md)
+- [Business Use](docs/business-use.md)
+- [Release Guide](docs/RELEASE.md)
 
 ## GitHub Pages landing page
 
-This repository includes a professional landing page under `docs/` and a GitHub Actions Pages workflow.
-
-After GitHub Pages is enabled for the repository, the public landing page is expected at:
+The repository includes a bilingual SEO landing page under `docs/`.
 
 ```text
 https://masarray.github.io/desonkupik/
 ```
-
-## Licensing
-
-DeSonKuPik is distributed under a **dual-license model**:
-
-1. **GPL-3.0-or-later** for open-source use.
-2. **Commercial license** for proprietary distribution, OEM bundling, white-label use, closed-source derivative products, commercial SaaS, or enterprise redistribution.
-
-See [LICENSING.md](LICENSING.md) and [COMMERCIAL-LICENSE.md](COMMERCIAL-LICENSE.md).
-
-This is not legal advice. For commercial deployment, review the final license terms with qualified counsel.
 
 ## Engineering notes
 
@@ -143,9 +133,7 @@ This is not legal advice. For commercial deployment, review the final license te
 
 ## Contributing
 
-Contributions are welcome under the GPL license path. By contributing, you agree that your contribution can be distributed under the repository's dual-license model.
-
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting issues or pull requests.
+Contributions are welcome through issues and pull requests. Please read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting changes.
 
 ## Security
 
